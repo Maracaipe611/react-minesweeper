@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Board from "./Components/Board";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+
+  const [jogar, setJogar] = useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* {!jogar ?
+      <div style={{width: "300px", height: "300px", backgroundColor: "black", border: "2px solid red"}}>
+        <button onClick={() => setJogar(true)} style={{margin: "15vh auto", display: "flex", justifyContent: "center", alignItems: "center", width: "80px", borderRadius: "15px", cursor: "pointer"}}>JOGAR</button>
+      </div>
+      : */}
+      <Board />{/* } */}
+
     </div>
   );
 }
